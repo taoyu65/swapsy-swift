@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		6649A41B22BC6DF800A38624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6649A41922BC6DF800A38624 /* Main.storyboard */; };
 		6649A41D22BC6DFA00A38624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6649A41C22BC6DFA00A38624 /* Assets.xcassets */; };
 		6649A42022BC6DFA00A38624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6649A41E22BC6DFA00A38624 /* LaunchScreen.storyboard */; };
+		7A5B1EA8003C169EDAAD944C /* Pods_Swapsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,10 @@
 		6649A41C22BC6DFA00A38624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6649A41F22BC6DFA00A38624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6649A42122BC6DFA00A38624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6649A42822BC804500A38624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swapsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.release.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.release.xcconfig"; sourceTree = "<group>"; };
+		E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.debug.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5B1EA8003C169EDAAD944C /* Pods_Swapsy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26191D1C9225ED2D4375D3EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6649A40922BC6DF800A38624 = {
 			isa = PBXGroup;
 			children = (
 				6649A41422BC6DF800A38624 /* Swapsy */,
 				6649A41322BC6DF800A38624 /* Products */,
+				B2740CD4610D3A1B976235B0 /* Pods */,
+				26191D1C9225ED2D4375D3EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,15 @@
 			path = Swapsy;
 			sourceTree = "<group>";
 		};
+		B2740CD4610D3A1B976235B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */,
+				D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6649A42422BC6DFA00A38624 /* Build configuration list for PBXNativeTarget "Swapsy" */;
 			buildPhases = (
+				209E6621630C56FE91C9FE97 /* [CP] Check Pods Manifest.lock */,
 				6649A40E22BC6DF800A38624 /* Sources */,
 				6649A40F22BC6DF800A38624 /* Frameworks */,
 				6649A41022BC6DF800A38624 /* Resources */,
+				FFC058AA4DEEC2C070E9CF4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		209E6621630C56FE91C9FE97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swapsy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC058AA4DEEC2C070E9CF4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swapsy/Pods-Swapsy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swapsy/Pods-Swapsy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swapsy/Pods-Swapsy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6649A40E22BC6DF800A38624 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -147,6 +216,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6649A41A22BC6DF800A38624 /* Base */,
+				6649A42822BC804500A38624 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -280,6 +350,7 @@
 		};
 		6649A42522BC6DFA00A38624 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,12 +363,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.Swapsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6649A42622BC6DFA00A38624 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,7 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.Swapsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
