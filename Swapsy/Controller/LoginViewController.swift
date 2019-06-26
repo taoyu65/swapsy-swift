@@ -39,7 +39,8 @@ class LoginViewController: UIViewController, LoginDelegate {
     
     func userDidLogin(apiReturn: APIReturn) {
         if apiReturn.status {
-            let mainViewController = MainViewController()
+            let storyboard = UIStoryboard(name: "Swapsy", bundle: nil)
+            let mainViewController = storyboard.instantiateInitialViewController()!
             self.present(mainViewController, animated: true, completion: nil)
             print("success")
         } else {

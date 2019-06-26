@@ -184,30 +184,6 @@
             </objects>
             <point key="canvasLocation" x="232.5" y="-47.5"/>
         </scene>
-        <!--Main Controller-->
-        <scene sceneID="1Xa-vR-Tkl">
-            <objects>
-                <viewController storyboardIdentifier="MainControllerIdentifier" title="Swapsy" id="0qJ-Qi-hzb" userLabel="Main Controller" customClass="MainViewController" customModule="Swapsy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w6i-wk-TE8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-ML-N22">
-                                <rect key="frame" x="156" y="179" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="AHs-Lk-8XR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y2y-0J-eEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1086" y="237"/>
-        </scene>
         <!--register controller-->
         <scene sceneID="wPu-Cj-eH8">
             <objects>
@@ -256,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6A-SJ-XZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="-436"/>
+            <point key="canvasLocation" x="1084" y="-46"/>
         </scene>
     </scenes>
     <resources>

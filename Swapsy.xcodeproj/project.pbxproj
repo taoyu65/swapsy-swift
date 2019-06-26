@@ -18,6 +18,7 @@
 		66CC6B4022BDE45B00F86D10 /* APIReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC6B3F22BDE45B00F86D10 /* APIReturn.swift */; };
 		66D7B94522C316B200BCB005 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7B94422C316B200BCB005 /* MainViewController.swift */; };
 		66D7B94922C31B0A00BCB005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D7B94822C31B0A00BCB005 /* Main.storyboard */; };
+		66D7B94B22C31B7E00BCB005 /* Swapsy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D7B94A22C31B7E00BCB005 /* Swapsy.storyboard */; };
 		7A5B1EA8003C169EDAAD944C /* Pods_Swapsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		66CC6B3F22BDE45B00F86D10 /* APIReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIReturn.swift; sourceTree = "<group>"; };
 		66D7B94422C316B200BCB005 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		66D7B94822C31B0A00BCB005 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		66D7B94A22C31B7E00BCB005 /* Swapsy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Swapsy.storyboard; sourceTree = "<group>"; };
 		89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swapsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.release.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.release.xcconfig"; sourceTree = "<group>"; };
 		E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.debug.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				66D7B94822C31B0A00BCB005 /* Main.storyboard */,
+				66D7B94A22C31B7E00BCB005 /* Swapsy.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				66D7B94922C31B0A00BCB005 /* Main.storyboard in Resources */,
 				6649A42022BC6DFA00A38624 /* LaunchScreen.storyboard in Resources */,
 				6649A41D22BC6DFA00A38624 /* Assets.xcassets in Resources */,
+				66D7B94B22C31B7E00BCB005 /* Swapsy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
