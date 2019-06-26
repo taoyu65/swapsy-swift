@@ -39,7 +39,8 @@ class LoginViewController: UIViewController, LoginDelegate {
     
     func userDidLogin(apiReturn: APIReturn) {
         if apiReturn.status {
-            
+            let mainViewController = MainViewController()
+            self.present(mainViewController, animated: true, completion: nil)
             print("success")
         } else {
             let message = "Email or passord wrong."

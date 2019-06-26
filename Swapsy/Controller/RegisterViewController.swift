@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController {
+class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         
     }
