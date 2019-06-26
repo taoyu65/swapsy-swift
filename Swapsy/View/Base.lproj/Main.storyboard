@@ -35,7 +35,7 @@
         <!--Login controller-->
         <scene sceneID="oXc-aI-0BN">
             <objects>
-                <viewController id="ZfT-OI-RtA" userLabel="Login controller" customClass="ViewController" customModule="Swapsy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginControllerIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZfT-OI-RtA" userLabel="Login controller" customClass="LoginViewController" customModule="Swapsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fT4-hC-hYi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_swapsy_white" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-f2-boe">
-                                        <rect key="frame" x="67.5" y="15" width="240.00000000000006" height="70"/>
+                                        <rect key="frame" x="67.5" y="15" width="240" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="3vA-mK-Snr"/>
                                             <constraint firstAttribute="width" constant="240" id="IZt-4F-how"/>
@@ -87,6 +87,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="LoginOnClick:" destination="ZfT-OI-RtA" eventType="touchUpInside" id="8Fo-nq-RZR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,6 +174,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="EmailText" destination="kV3-GP-kZt" id="Csc-tX-KRD"/>
+                        <outlet property="LoginBtn" destination="ysN-Ur-vjs" id="68t-FQ-0XP"/>
+                        <outlet property="PasswordText" destination="xfs-mr-xtp" id="IGf-HF-c2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcP-dl-UTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +187,7 @@
         <!--register controller-->
         <scene sceneID="wPu-Cj-eH8">
             <objects>
-                <viewController id="vwa-Vd-i6q" userLabel="register controller" sceneMemberID="viewController">
+                <viewController id="vwa-Vd-i6q" userLabel="register controller" customClass="RegisterController" customModule="Swapsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1S-JU-UP9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +201,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_swapsy_white" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-kX-BtK">
-                                        <rect key="frame" x="67.5" y="11" width="240.00000000000006" height="128"/>
+                                        <rect key="frame" x="67.5" y="11" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="jMk-V2-vl5"/>
                                             <constraint firstAttribute="height" constant="128" id="w11-Hl-PUu"/>
