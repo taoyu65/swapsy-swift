@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class API: APIBase {
     var loginDelegate: LoginDelegate?
+    var initDelegate: InitDelegate?
     
     private let url: String = "http://localhost:4443/v1/"
     internal let apiKey: String = ""

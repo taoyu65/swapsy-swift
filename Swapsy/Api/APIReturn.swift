@@ -1,10 +1,3 @@
-//
-//  APIReturn.swift
-//  Swapsy
-//
-//  Created by Tao Yu on 6/21/19.
-//  Copyright © 2019 Tao Yu. All rights reserved.
-//
 
 import Foundation
 import SwiftyJSON
@@ -12,20 +5,24 @@ import SwiftyJSON
 struct APIReturn {
     private var _status: Bool = false
     private var _message: String = ""
+    private var _obj: Any? = nil
     
     init(_ status: Bool, _ message: String) {
         _status = status
         _message = message
+        _obj = nil
     }
     
-    init(returnJson re: JSON) {
+    init(returnJson re: JSON, pObj: ReturnProtocol? = nil) {
+        if let content = re["content"].dictionary {
+            pObj?.construct(content: content)
+            _obj = pObj
+        }
         if let status = re["status"].bool {
             _status = Bool(status)
             if let message = re["message"].string {
                 _message = String(message)
             }
-        } else {
-            
         }
     }
     
@@ -50,15 +47,10 @@ struct APIReturn {
             _message = newValue
         }
     }
-//
-//    mutating func initReturn(returnJson re: JSON) {
-//        if let status = re["status"].bool {
-//            _status = status
-//            if let message = re["message"].string {
-//                _message = message
-//            }
-//        } else {
-//
-//        }
-//    }
+    
+    var obj: Any {
+        get {
+            return _obj as Any
+        }
+    }
 }

@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_swapsy_white" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-f2-boe">
-                                        <rect key="frame" x="67.5" y="15" width="240.00000000000006" height="70"/>
+                                        <rect key="frame" x="67.5" y="15" width="240" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="3vA-mK-Snr"/>
                                             <constraint firstAttribute="width" constant="240" id="IZt-4F-how"/>
@@ -201,7 +201,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_swapsy_white" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-kX-BtK">
-                                        <rect key="frame" x="67.5" y="11" width="240.00000000000006" height="128"/>
+                                        <rect key="frame" x="67.5" y="11" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="jMk-V2-vl5"/>
                                             <constraint firstAttribute="height" constant="128" id="w11-Hl-PUu"/>

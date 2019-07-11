@@ -11,5 +11,6 @@ target 'Swapsy' do
   pod 'Alamofire'
   pod 'SVProgressHUD'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'LGSideMenuController'
+  pod 'SideMenu'
+  pod 'Segmentio', '~> 3.3'
 end
