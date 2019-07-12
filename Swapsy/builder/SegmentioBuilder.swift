@@ -4,17 +4,17 @@ import Segmentio
 
 struct SegmentioBuilder {
     static func startBuild(segmentioView: Segmentio,
-                                    segmentioStyle: SegmentioStyle,
-                                    segmentioPosition: SegmentioPosition = .fixed(maxVisibleItems: 4)) {
+                           segmentioStyle: SegmentioStyle,
+                           segmentioPosition: SegmentioPosition = .fixed(maxVisibleItems: 4),
+                           plist: PlistModel) {
         segmentioView.setup(
-            content: segmentioContent(),
+            content: segmentioContent(plist),
             style: segmentioStyle,
             options: segmentioOptions(style: segmentioStyle, position: segmentioPosition)
         )
     }
     
-    private static func segmentioContent() -> [SegmentioItem] {
-        let plist = PlistModel()
+    private static func segmentioContent(_ plist: PlistModel) -> [SegmentioItem] {
         var _re: [SegmentioItem] = []
         for currency in plist.currency ?? [] {
             _re.append(SegmentioItem(title: currency, image: UIImage(named: currency)))
@@ -33,7 +33,7 @@ struct SegmentioBuilder {
         }
         
         return SegmentioOptions(
-            backgroundColor: SwapsyColor.white,
+            backgroundColor: .swapsyWhite,
             segmentPosition: position,
             scrollEnabled: true,
             indicatorOptions: segmentioIndicatorOptions(),
@@ -50,9 +50,9 @@ struct SegmentioBuilder {
     private static func segmentioStates() -> SegmentioStates {
         let font = UIFont.swapsyFontDefault(ofSize: 13)
         return SegmentioStates(
-            defaultState: SegmentioState(backgroundColor: SwapsyColor.white, titleFont: font, titleTextColor: SwapsyColor.swapsyBlue),
-            selectedState: SegmentioState(backgroundColor: SwapsyColor.white, titleFont: font, titleTextColor: SwapsyColor.swapsyBlue),
-            highlightedState: SegmentioState(backgroundColor: SwapsyColor.white, titleFont: font, titleTextColor: SwapsyColor.swapsyBlue)
+            defaultState: SegmentioState(backgroundColor: .swapsyWhite, titleFont: font, titleTextColor: .swapsyFlatBlue),
+            selectedState: SegmentioState(backgroundColor: .swapsyWhite, titleFont: font, titleTextColor: .swapsyFlatBlue),
+            highlightedState: SegmentioState(backgroundColor: .swapsyWhite, titleFont: font, titleTextColor: .swapsyFlatBlue)
         )
     }
     
@@ -61,7 +61,7 @@ struct SegmentioBuilder {
             type: .bottom,
             ratio: 1,
             height: 5,
-            color: SwapsyColor.swapsyBlue
+            color: .swapsyFlatBlue
         )
     }
     
@@ -69,14 +69,14 @@ struct SegmentioBuilder {
         return SegmentioHorizontalSeparatorOptions(
             type: .topAndBottom,
             height: 1,
-            color: SwapsyColor.white
+            color: .swapsyWhite
         )
     }
     
     private static func segmentioVerticalSeparatorOptions() -> SegmentioVerticalSeparatorOptions {
         return SegmentioVerticalSeparatorOptions(
             ratio: 1,
-            color: SwapsyColor.white
+            color: .swapsyWhite
         )
     }
 }

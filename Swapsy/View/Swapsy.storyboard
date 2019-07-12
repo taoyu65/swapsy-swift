@@ -577,6 +577,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="logoutBtn" destination="H6m-lS-cgZ" id="1aY-r6-tSh"/>
+                        <outlet property="menuBtn" destination="sFb-3c-xfX" id="qEl-9k-XtU"/>
                         <outlet property="safeView" destination="n7q-Su-0RP" id="CiR-pN-zXh"/>
                         <outlet property="sendAmountBoxView" destination="0VX-Ex-HbN" id="vhu-Ep-1XC"/>
                         <outlet property="sendCurrencyIconView" destination="hvi-fR-N5T" id="rFE-Tm-Tw7"/>

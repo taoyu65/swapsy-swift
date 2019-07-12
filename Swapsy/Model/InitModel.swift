@@ -2,14 +2,6 @@
 import Foundation
 
 class InitModel: ModelBase {
-    private var _version: String = ""
+//    let plistVersion: String = ""
     
-//    var version: String {
-//        get {
-//
-//        }
-//        set {
-//            _version = newValue
-//        }
-//    }
 }

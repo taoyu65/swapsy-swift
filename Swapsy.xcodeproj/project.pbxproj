@@ -26,6 +26,11 @@
 		668F578622D2EA0800FF3486 /* SwapsyInit.plist in Resources */ = {isa = PBXBuildFile; fileRef = 668F578522D2EA0800FF3486 /* SwapsyInit.plist */; };
 		668F578822D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F578722D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift */; };
 		668F578A22D3F55500FF3486 /* SystemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F578922D3F55500FF3486 /* SystemExtension.swift */; };
+		66C292E622D7DE340035F1DA /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C292E522D7DE340035F1DA /* BlockModel.swift */; };
+		66C292E922D7E05F0035F1DA /* TradeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C292E822D7E05F0035F1DA /* TradeStatus.swift */; };
+		66C292EB22D7E7280035F1DA /* UserStatusRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C292EA22D7E7280035F1DA /* UserStatusRealm.swift */; };
+		66C292ED22D7FEFD0035F1DA /* LoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C292EC22D7FEFD0035F1DA /* LoginStatus.swift */; };
+		66C292F222D904AE0035F1DA /* UserStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C292F122D904AE0035F1DA /* UserStatusModel.swift */; };
 		66CC6B3722BDAC7A00F86D10 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC6B3622BDAC7A00F86D10 /* RegisterViewController.swift */; };
 		66CC6B3A22BDD01800F86D10 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC6B3922BDD01800F86D10 /* API.swift */; };
 		66CC6B3C22BDD0AE00F86D10 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC6B3B22BDD0AE00F86D10 /* Login.swift */; };
@@ -62,6 +67,11 @@
 		668F578522D2EA0800FF3486 /* SwapsyInit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwapsyInit.plist; sourceTree = "<group>"; };
 		668F578722D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCurrencyIconBuilder.swift; sourceTree = "<group>"; };
 		668F578922D3F55500FF3486 /* SystemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExtension.swift; sourceTree = "<group>"; };
+		66C292E522D7DE340035F1DA /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
+		66C292E822D7E05F0035F1DA /* TradeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeStatus.swift; sourceTree = "<group>"; };
+		66C292EA22D7E7280035F1DA /* UserStatusRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusRealm.swift; sourceTree = "<group>"; };
+		66C292EC22D7FEFD0035F1DA /* LoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatus.swift; sourceTree = "<group>"; };
+		66C292F122D904AE0035F1DA /* UserStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusModel.swift; sourceTree = "<group>"; };
 		66CC6B3622BDAC7A00F86D10 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		66CC6B3922BDD01800F86D10 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		66CC6B3B22BDD0AE00F86D10 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -189,6 +199,23 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		66C292E722D7E0440035F1DA /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				66C292E822D7E05F0035F1DA /* TradeStatus.swift */,
+				66C292EC22D7FEFD0035F1DA /* LoginStatus.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		66C292F022D904490035F1DA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				66C292EA22D7E7280035F1DA /* UserStatusRealm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		66CC6B3122BDA6E500F86D10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,9 +243,13 @@
 		66CC6B3422BDA70400F86D10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66C292F022D904490035F1DA /* Realm */,
+				66C292E722D7E0440035F1DA /* Enum */,
 				668F577922D1897700FF3486 /* InitModel.swift */,
 				668F577B22D189A200FF3486 /* ModelBase.swift */,
 				668F578022D1930E00FF3486 /* PlistModel.swift */,
+				66C292E522D7DE340035F1DA /* BlockModel.swift */,
+				66C292F122D904AE0035F1DA /* UserStatusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,8 +434,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CC6B3E22BDDD4400F86D10 /* APIBase.swift in Sources */,
+				66C292EB22D7E7280035F1DA /* UserStatusRealm.swift in Sources */,
 				6649A41822BC6DF800A38624 /* LoginViewController.swift in Sources */,
 				668F578122D1930E00FF3486 /* PlistModel.swift in Sources */,
+				66C292F222D904AE0035F1DA /* UserStatusModel.swift in Sources */,
 				668F578422D29FC900FF3486 /* InitComponent.swift in Sources */,
 				668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */,
 				668F577222D15F5E00FF3486 /* SwapsyColor.swift in Sources */,
@@ -420,9 +453,12 @@
 				668F577522D181ED00FF3486 /* SwapsyFontExtension.swift in Sources */,
 				668650A422D5147200B60326 /* SendAmountBoxBuilder.swift in Sources */,
 				668F577A22D1897700FF3486 /* InitModel.swift in Sources */,
+				66C292ED22D7FEFD0035F1DA /* LoginStatus.swift in Sources */,
 				6649A41622BC6DF800A38624 /* AppDelegate.swift in Sources */,
+				66C292E922D7E05F0035F1DA /* TradeStatus.swift in Sources */,
 				66CC6B3A22BDD01800F86D10 /* API.swift in Sources */,
 				66D7B94E22C40C2C00BCB005 /* LeftViewController.swift in Sources */,
+				66C292E622D7DE340035F1DA /* BlockModel.swift in Sources */,
 				6640935722D7AD0500CAF20C /* MainLabelBuilder.swift in Sources */,
 				66D7B95122C40CED00BCB005 /* RightViewController.swift in Sources */,
 				66CC6B3722BDAC7A00F86D10 /* RegisterViewController.swift in Sources */,

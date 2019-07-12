@@ -1,4 +1,5 @@
 import UIKit
+import ChameleonFramework
 
 extension String {
     //fonts
@@ -25,7 +26,9 @@ extension CGFloat {
 }
 
 extension UIColor {
-    static let swapsyWhite = SwapsyColor.white
-    static let swapsyBlock = SwapsyColor.black
-    static let swapsyMainText = SwapsyColor.darkGray
+    static let swapsyFlatWhite = FlatWhite()
+    static let swapsyWhite = UIColor.white
+    static let swapsyBlock = UIColor.black
+    static let swapsyMainText = UIColor.darkGray
+    static let swapsyFlatBlue = FlatBlue()
 }

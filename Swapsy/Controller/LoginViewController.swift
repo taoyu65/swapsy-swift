@@ -1,13 +1,7 @@
-//
-//  ViewController.swift
-//  Swapsy
-//
-//  Created by Tao Yu on 6/20/19.
-//  Copyright © 2019 Tao Yu. All rights reserved.
-//
 
 import UIKit
 import SVProgressHUD
+import RealmSwift
 
 class LoginViewController: UIViewController, LoginDelegate {
     
@@ -15,10 +9,19 @@ class LoginViewController: UIViewController, LoginDelegate {
     @IBOutlet weak var PasswordText: UITextField!
     @IBOutlet weak var LoginBtn: UIButton!
     
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
+        let userStatus = UserStatusModel()
+        if userStatus.isLoggedIn() {
+            //加载 block model.
+            // 根据block 的不同状态 加载不同的 界面.
+            //TAOYU: here todo
+            
+            redirectToMainView()
+        }
+        
         super.viewDidLoad()
-        
-        
     }
 
     @IBAction func LoginOnClick(_ sender: Any) {
@@ -39,10 +42,9 @@ class LoginViewController: UIViewController, LoginDelegate {
     
     func userDidLogin(apiReturn: APIReturn) {
         if apiReturn.status {
-            let storyboard = UIStoryboard(name: "Swapsy", bundle: nil)
-            let mainViewController = storyboard.instantiateInitialViewController()!
-            self.present(mainViewController, animated: true, completion: nil)
-            print("success")
+            recordLogin()
+            redirectToMainView()
+            //print(Realm.Configuration.defaultConfiguration.fileURL)
         } else {
             let message = "Email or passord wrong."
             let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
@@ -50,6 +52,25 @@ class LoginViewController: UIViewController, LoginDelegate {
             self.present(alert, animated: true, completion: nil)
         }
         SVProgressHUD.dismiss()
+    }
+    
+    private func redirectToMainView() {
+        let storyboard = UIStoryboard(name: "Swapsy", bundle: nil)
+        let mainViewController = storyboard.instantiateInitialViewController()!
+        self.present(mainViewController, animated: true, completion: {
+            print("user did login after and excuting completion")
+        })
+        print("success")
+    }
+    
+    private func recordLogin() {
+        let userStatus = UserStatusRealm()
+        userStatus.loginEmail = EmailText.text
+        userStatus.loginStatus = .LoggedIn
+        
+        try! realm.write {
+            realm.add(userStatus)
+        }
     }
 }
 

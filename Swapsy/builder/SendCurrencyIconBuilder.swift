@@ -46,7 +46,7 @@ class SendCurrencyIconBuilder: UIView {
     
     lazy var timeShape: CAShapeLayer = {
         let shape = CAShapeLayer()
-        shape.strokeColor = UIColor(named: "system")?.cgColor
+        shape.strokeColor = UIColor.flatBlue.withAlphaComponent(0.8).cgColor
         shape.lineWidth = 6
         shape.strokeEnd = 0
         shape.lineCap = CAShapeLayerLineCap.round
@@ -59,7 +59,7 @@ class SendCurrencyIconBuilder: UIView {
         shape.strokeColor = UIColor.clear.cgColor
         shape.lineWidth = 10
         shape.lineCap = CAShapeLayerLineCap.round
-        shape.fillColor = UIColor(named: "system")?.withAlphaComponent(0.3).cgColor
+        shape.fillColor = UIColor.flatBlue.withAlphaComponent(0.3).cgColor // UIColor(named: "system")?.withAlphaComponent(0.3).cgColor
         return shape
     }()
     

@@ -12,7 +12,7 @@ class SendAmountBoxBuilder: UIView {
         self.layer.cornerRadius = 4
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 5)
-        self.layer.shadowRadius = 4
+        self.layer.shadowRadius = 6
         self.layer.shadowOpacity = 0.2
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale

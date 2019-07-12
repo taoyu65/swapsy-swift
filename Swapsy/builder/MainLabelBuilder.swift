@@ -7,7 +7,7 @@ class MainLabelBuilder: UILabel {
     init(text: String, textAligment: NSTextAlignment, numberOfLines: Int) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.textAlignment = textAlignment
+        self.textAlignment = textAligment
         self.font = .swapsyFontLight(ofSize: size)
         self.textColor = .swapsyMainText
         self.text = text
