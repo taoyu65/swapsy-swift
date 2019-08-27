@@ -25,16 +25,22 @@ class PlistModel: Codable, ReturnProtocol {
 //        currencyIconMap = plist?.currencyIconMap
     }
     
-    func construct(content: [String: JSON]) {
-        if let version = content["version"]?.string {
+//    func construct(content: [JSON]) {
+//        return
+//    }
+    
+    func construct(content: String) {
+        let content = JSON.init(parseJSON: content)
+        if let version = content["version"].string {
             self.version = version
         }
-        if let currency = content["currency"]?.arrayObject {
+        if let currency = content["currency"].arrayObject {
             self.currency = currency as? [String]
         }
-        if let currencyWalletMap = content["currencyWalletMap"]?.dictionaryObject {
+        if let currencyWalletMap = content["currencyWalletMap"].dictionaryObject {
             self.currencyWalletMap = currencyWalletMap as? [String: [String]]
         }
+        
     }
 
     private func getPlist() -> PlistModel? {

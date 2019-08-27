@@ -16,6 +16,7 @@ extension API {
             response in
             let plist = PlistModel()
             let re = APIReturn(returnJson: JSON(response.result.value!), pObj: plist)
+            self.checkContentObj(obj: re.obj)
             self.initDelegate?.updateInit(plist: re.obj as! PlistModel)
         }
     }

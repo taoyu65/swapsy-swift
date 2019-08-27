@@ -5,7 +5,7 @@ import SwiftyJSON
 struct APIReturn {
     private var _status: Bool = false
     private var _message: String = ""
-    private var _obj: Any? = nil
+    private var _obj: Any?
     
     init(_ status: Bool, _ message: String) {
         _status = status
@@ -14,10 +14,13 @@ struct APIReturn {
     }
     
     init(returnJson re: JSON, pObj: ReturnProtocol? = nil) {
-        if let content = re["content"].dictionary {
-            pObj?.construct(content: content)
-            _obj = pObj
+        if (re["content"].exists()) {
+            if let content = re["content"].rawString() {
+                pObj?.construct(content: content)
+                _obj = pObj
+            }
         }
+        
         if let status = re["status"].bool {
             _status = Bool(status)
             if let message = re["message"].string {

@@ -5,6 +5,7 @@ import Segmentio
 class MainViewController: UIViewController {
     
     let plist = PlistModel()
+    var rateMap = [CurrencyRateModel]()
     
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
@@ -12,12 +13,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var sendCurrencyIconView: UIView!
     @IBOutlet weak var sendLabel: UILabel!
     @IBOutlet weak var sendAmountBoxView: UIView!
+    @IBOutlet weak var receiveCollectionView: UIView!
     
     private var circleViewController: SendCurrencyIconViewControlelr?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("this is rate map:", rateMap)
         _initSideMenu()
         
         //MARK: others
@@ -38,10 +40,10 @@ class MainViewController: UIViewController {
         let sendAmountBox = SendAmountBoxBuilder()
         
         //MARK: last update label
-        let lastUpdateLabel = MainLabelBuilder(text: "Last update: Unknown", textAligment: .left, numberOfLines: 1)
+        let lastUpdateLabel = MainSmallLabelBuilder(text: "Last update: Unknown", textAligment: .left, numberOfLines: 1)
         
         //MARK: current currency label
-        let currentCurrencyLabel = MainLabelBuilder(text: "Current currency: Unknown", textAligment: .right, numberOfLines: 1)
+        let currentCurrencyLabel = MainSmallLabelBuilder(text: "Current currency: Unknown", textAligment: .right, numberOfLines: 1)
         
         //MARK: send amount text field
         let sendAmountField: UITextField = {
@@ -53,6 +55,7 @@ class MainViewController: UIViewController {
             tf.layer.borderColor = UIColor.swapsyMainText.cgColor.copy(alpha: 0.5)
             tf.textAlignment = .center
             tf.layer.cornerRadius = 4
+//            tf.text = "100"
 //            tf.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
             return tf
         }()
@@ -69,10 +72,26 @@ class MainViewController: UIViewController {
             bt.backgroundColor = .swapsyFlatBlue
             bt.setTitle("Update", for: .normal)
             bt.setTitleColor(.swapsyFlatWhite, for: .normal)
-//            bt.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+            bt.addTarget(self, action: #selector(updateRate), for: .touchUpInside)
             return bt
         }()
         
+        //MARK: receive currency list
+        let receiveCollection: UICollectionView = {
+            let cellId = "cellId"
+//            var currencyLabel = UILabel(frame: .zero)
+            let layout = UICollectionViewFlowLayout()
+            let view = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
+            layout.scrollDirection = .vertical
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            layout.minimumInteritemSpacing = 10
+            layout.minimumLineSpacing = 15
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.backgroundColor = UIColor(named: "")?.withAlphaComponent(1)
+            view.isScrollEnabled = true
+            view.register(ReceiveCurrencyCellBuilder.self, forCellWithReuseIdentifier: cellId)
+            return view
+        }()
         
         safeView.addSubview(segmentioView)
         sendAmountBoxView.addSubview(sendAmountBox)
@@ -80,6 +99,7 @@ class MainViewController: UIViewController {
         sendAmountBox.addSubview(currentCurrencyLabel)
         sendAmountBox.addSubview(sendAmountField)
         sendAmountBox.addSubview(updateButton)
+        receiveCollectionView.addSubview(receiveCollection)
         
         NSLayoutConstraint.activate([
             sendAmountBox.topAnchor.constraint(equalTo: sendAmountBoxView.topAnchor, constant: 5),
@@ -106,6 +126,8 @@ class MainViewController: UIViewController {
             updateButton.leftAnchor.constraint(equalTo: sendAmountBox.leftAnchor, constant: 10),
             updateButton.rightAnchor.constraint(equalTo: sendAmountBox.rightAnchor, constant: -10),
             updateButton.heightAnchor.constraint(equalToConstant: 30)
+            
+            
         ])
         
         print("view did load")
@@ -120,6 +142,10 @@ class MainViewController: UIViewController {
             
             self.circleViewController?.changeCurrencyImage(name: imageName)
         }
+        
+//        receiveCollection.delegate = self
+//        receiveCollection.dataSource = self
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {

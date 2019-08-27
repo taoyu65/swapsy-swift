@@ -1,7 +1,6 @@
 
 import UIKit
 import SVProgressHUD
-import RealmSwift
 
 class LoginViewController: UIViewController, LoginDelegate {
     
@@ -9,14 +8,15 @@ class LoginViewController: UIViewController, LoginDelegate {
     @IBOutlet weak var PasswordText: UITextField!
     @IBOutlet weak var LoginBtn: UIButton!
     
-    let realm = try! Realm()
-    
     override func viewDidLoad() {
         let userStatus = UserStatusModel()
         if userStatus.isLoggedIn() {
             //加载 block model.
             // 根据block 的不同状态 加载不同的 界面.
             //TAOYU: here todo
+            
+            // read and load to realm
+            _fetchCurrencyRate()
             
             redirectToMainView()
         }
@@ -42,9 +42,12 @@ class LoginViewController: UIViewController, LoginDelegate {
     
     func userDidLogin(apiReturn: APIReturn) {
         if apiReturn.status {
-            recordLogin()
+            do {
+                try recordLogin()
+            } catch {
+                fatalError("Email can not be empty.")
+            }
             redirectToMainView()
-            //print(Realm.Configuration.defaultConfiguration.fileURL)
         } else {
             let message = "Email or passord wrong."
             let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
@@ -63,14 +66,19 @@ class LoginViewController: UIViewController, LoginDelegate {
         print("success")
     }
     
-    private func recordLogin() {
-        let userStatus = UserStatusRealm()
-        userStatus.loginEmail = EmailText.text
-        userStatus.loginStatus = .LoggedIn
-        
-        try! realm.write {
-            realm.add(userStatus)
+    private func recordLogin() throws {
+        let email = EmailText.text!
+        if email == "" {
+            throw RuntimeError("email can not be empty.")
         }
+        Storage.writeLoginInfo(email: email, status: .LoggedIn)
+    }
+    
+    private func _fetchCurrencyRate() {
+        let api = API()
+        api.CurrencyMaps(success: {(response: CurrencyRateModel) -> Void in
+            Storage.writeCurrencyRate(rate: response.rateMap)
+        })
     }
 }
 

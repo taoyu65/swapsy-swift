@@ -12,6 +12,15 @@
 		6649A41822BC6DF800A38624 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649A41722BC6DF800A38624 /* LoginViewController.swift */; };
 		6649A41D22BC6DFA00A38624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6649A41C22BC6DFA00A38624 /* Assets.xcassets */; };
 		6649A42022BC6DFA00A38624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6649A41E22BC6DFA00A38624 /* LaunchScreen.storyboard */; };
+		668025D0231326530023CD84 /* CurrencyRateRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025CF231326530023CD84 /* CurrencyRateRealm.swift */; };
+		668025D323145CE80023CD84 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D223145CE80023CD84 /* Storage.swift */; };
+		668025D623145FE10023CD84 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D523145FE10023CD84 /* StorageProtocol.swift */; };
+		668025D8231460330023CD84 /* StorageRealmBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D7231460330023CD84 /* StorageRealmBase.swift */; };
+		668025DA231460F20023CD84 /* GetLoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D9231460F20023CD84 /* GetLoginStatus.swift */; };
+		668025DC231467840023CD84 /* WriteLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025DB231467840023CD84 /* WriteLoginInfo.swift */; };
+		668025DF23146CEC0023CD84 /* RunTimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025DE23146CEC0023CD84 /* RunTimeError.swift */; };
+		668025E1231478430023CD84 /* WriteCurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025E0231478430023CD84 /* WriteCurrencyRate.swift */; };
+		668025E4231482C50023CD84 /* CurrencyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025E3231482C50023CD84 /* CurrencyMap.swift */; };
 		668650A222D513E200B60326 /* ReceiveCurrencyListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */; };
 		668650A422D5147200B60326 /* SendAmountBoxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */; };
 		668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */; };
@@ -42,6 +51,10 @@
 		66D7B94E22C40C2C00BCB005 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7B94D22C40C2C00BCB005 /* LeftViewController.swift */; };
 		66D7B95122C40CED00BCB005 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7B95022C40CED00BCB005 /* RightViewController.swift */; };
 		66D7B95322C4222300BCB005 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7B95222C4222300BCB005 /* RootViewController.swift */; };
+		66DA659C2311D4DD00F709E3 /* MainViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA659B2311D4DD00F709E3 /* MainViewHandler.swift */; };
+		66DA659E2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA659D2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift */; };
+		66DA65A02311D7F400F709E3 /* MainImageViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA659F2311D7F400F709E3 /* MainImageViewBuilder.swift */; };
+		66DA65A22311E8BF00F709E3 /* CurrencyRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA65A12311E8BF00F709E3 /* CurrencyRateModel.swift */; };
 		7A5B1EA8003C169EDAAD944C /* Pods_Swapsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +66,15 @@
 		6649A41C22BC6DFA00A38624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6649A41F22BC6DFA00A38624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6649A42122BC6DFA00A38624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		668025CF231326530023CD84 /* CurrencyRateRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateRealm.swift; sourceTree = "<group>"; };
+		668025D223145CE80023CD84 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		668025D523145FE10023CD84 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		668025D7231460330023CD84 /* StorageRealmBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRealmBase.swift; sourceTree = "<group>"; };
+		668025D9231460F20023CD84 /* GetLoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginStatus.swift; sourceTree = "<group>"; };
+		668025DB231467840023CD84 /* WriteLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLoginInfo.swift; sourceTree = "<group>"; };
+		668025DE23146CEC0023CD84 /* RunTimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeError.swift; sourceTree = "<group>"; };
+		668025E0231478430023CD84 /* WriteCurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCurrencyRate.swift; sourceTree = "<group>"; };
+		668025E3231482C50023CD84 /* CurrencyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMap.swift; sourceTree = "<group>"; };
 		668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCurrencyListBuilder.swift; sourceTree = "<group>"; };
 		668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAmountBoxBuilder.swift; sourceTree = "<group>"; };
 		668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCurrencyIconViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +105,10 @@
 		66D7B94D22C40C2C00BCB005 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		66D7B95022C40CED00BCB005 /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		66D7B95222C4222300BCB005 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		66DA659B2311D4DD00F709E3 /* MainViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewHandler.swift; sourceTree = "<group>"; };
+		66DA659D2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCurrencyCellBuilder.swift; sourceTree = "<group>"; };
+		66DA659F2311D7F400F709E3 /* MainImageViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageViewBuilder.swift; sourceTree = "<group>"; };
+		66DA65A12311E8BF00F709E3 /* CurrencyRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateModel.swift; sourceTree = "<group>"; };
 		89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swapsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.release.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.release.xcconfig"; sourceTree = "<group>"; };
 		E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.debug.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,11 +155,13 @@
 		6649A41422BC6DF800A38624 /* Swapsy */ = {
 			isa = PBXGroup;
 			children = (
+				668025DD23146CD80023CD84 /* Exception */,
 				668F578222D29FA000FF3486 /* Component */,
 				668F577D22D191B100FF3486 /* Supporting Files */,
 				668F577322D181B200FF3486 /* extensions */,
 				668F577022D15F3600FF3486 /* resources */,
 				668F576D22D156F200FF3486 /* builder */,
+				668025D123132DD10023CD84 /* Storage */,
 				66CC6B3422BDA70400F86D10 /* Model */,
 				66CC6B3322BDA6FB00F86D10 /* Api */,
 				66CC6B3522BDA71200F86D10 /* View */,
@@ -144,14 +172,53 @@
 			path = Swapsy;
 			sourceTree = "<group>";
 		};
+		668025D123132DD10023CD84 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				668025D423145D8B0023CD84 /* StorageRealm */,
+				668025D223145CE80023CD84 /* Storage.swift */,
+				668025D523145FE10023CD84 /* StorageProtocol.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		668025D423145D8B0023CD84 /* StorageRealm */ = {
+			isa = PBXGroup;
+			children = (
+				668025D7231460330023CD84 /* StorageRealmBase.swift */,
+				668025D9231460F20023CD84 /* GetLoginStatus.swift */,
+				668025DB231467840023CD84 /* WriteLoginInfo.swift */,
+				668025E0231478430023CD84 /* WriteCurrencyRate.swift */,
+			);
+			path = StorageRealm;
+			sourceTree = "<group>";
+		};
+		668025DD23146CD80023CD84 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				668025DE23146CEC0023CD84 /* RunTimeError.swift */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
+		668025E2231482940023CD84 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				668025E3231482C50023CD84 /* CurrencyMap.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		668F576D22D156F200FF3486 /* builder */ = {
 			isa = PBXGroup;
 			children = (
 				668F576E22D1571C00FF3486 /* SegmentioBuilder.swift */,
 				668F578722D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift */,
 				668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */,
-				668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */,
 				6640935622D7AD0500CAF20C /* MainLabelBuilder.swift */,
+				66DA659F2311D7F400F709E3 /* MainImageViewBuilder.swift */,
+				668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */,
+				66DA659D2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift */,
 			);
 			path = builder;
 			sourceTree = "<group>";
@@ -212,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				66C292EA22D7E7280035F1DA /* UserStatusRealm.swift */,
+				668025CF231326530023CD84 /* CurrencyRateRealm.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -219,6 +287,7 @@
 		66CC6B3122BDA6E500F86D10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				66DA659A2311D4B800F709E3 /* Handlers */,
 				66D7B94C22C40BF800BCB005 /* Swapsy */,
 				6649A41722BC6DF800A38624 /* LoginViewController.swift */,
 				66CC6B3622BDAC7A00F86D10 /* RegisterViewController.swift */,
@@ -231,6 +300,7 @@
 		66CC6B3322BDA6FB00F86D10 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				668025E2231482940023CD84 /* Settings */,
 				668F577622D1873600FF3486 /* Init */,
 				66CC6B3822BDCFE900F86D10 /* Account */,
 				66CC6B3922BDD01800F86D10 /* API.swift */,
@@ -250,6 +320,7 @@
 				668F578022D1930E00FF3486 /* PlistModel.swift */,
 				66C292E522D7DE340035F1DA /* BlockModel.swift */,
 				66C292F122D904AE0035F1DA /* UserStatusModel.swift */,
+				66DA65A12311E8BF00F709E3 /* CurrencyRateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +358,14 @@
 				66D7B95222C4222300BCB005 /* RootViewController.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		66DA659A2311D4B800F709E3 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				66DA659B2311D4DD00F709E3 /* MainViewHandler.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		B2740CD4610D3A1B976235B0 /* Pods */ = {
@@ -433,28 +512,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DA659C2311D4DD00F709E3 /* MainViewHandler.swift in Sources */,
 				66CC6B3E22BDDD4400F86D10 /* APIBase.swift in Sources */,
+				66DA659E2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift in Sources */,
 				66C292EB22D7E7280035F1DA /* UserStatusRealm.swift in Sources */,
 				6649A41822BC6DF800A38624 /* LoginViewController.swift in Sources */,
+				668025E4231482C50023CD84 /* CurrencyMap.swift in Sources */,
+				668025D323145CE80023CD84 /* Storage.swift in Sources */,
 				668F578122D1930E00FF3486 /* PlistModel.swift in Sources */,
 				66C292F222D904AE0035F1DA /* UserStatusModel.swift in Sources */,
+				66DA65A02311D7F400F709E3 /* MainImageViewBuilder.swift in Sources */,
 				668F578422D29FC900FF3486 /* InitComponent.swift in Sources */,
 				668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */,
+				66DA65A22311E8BF00F709E3 /* CurrencyRateModel.swift in Sources */,
+				668025D8231460330023CD84 /* StorageRealmBase.swift in Sources */,
 				668F577222D15F5E00FF3486 /* SwapsyColor.swift in Sources */,
 				668F577822D1875800FF3486 /* Init.swift in Sources */,
 				668F578822D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift in Sources */,
+				668025E1231478430023CD84 /* WriteCurrencyRate.swift in Sources */,
 				66CC6B3C22BDD0AE00F86D10 /* Login.swift in Sources */,
 				668650A222D513E200B60326 /* ReceiveCurrencyListBuilder.swift in Sources */,
 				668F576F22D1571C00FF3486 /* SegmentioBuilder.swift in Sources */,
 				66D7B95322C4222300BCB005 /* RootViewController.swift in Sources */,
+				668025DA231460F20023CD84 /* GetLoginStatus.swift in Sources */,
+				668025D0231326530023CD84 /* CurrencyRateRealm.swift in Sources */,
 				668F578A22D3F55500FF3486 /* SystemExtension.swift in Sources */,
 				66CC6B4022BDE45B00F86D10 /* APIReturn.swift in Sources */,
+				668025DF23146CEC0023CD84 /* RunTimeError.swift in Sources */,
 				668F577C22D189A200FF3486 /* ModelBase.swift in Sources */,
 				668F577522D181ED00FF3486 /* SwapsyFontExtension.swift in Sources */,
+				668025D623145FE10023CD84 /* StorageProtocol.swift in Sources */,
 				668650A422D5147200B60326 /* SendAmountBoxBuilder.swift in Sources */,
 				668F577A22D1897700FF3486 /* InitModel.swift in Sources */,
 				66C292ED22D7FEFD0035F1DA /* LoginStatus.swift in Sources */,
 				6649A41622BC6DF800A38624 /* AppDelegate.swift in Sources */,
+				668025DC231467840023CD84 /* WriteLoginInfo.swift in Sources */,
 				66C292E922D7E05F0035F1DA /* TradeStatus.swift in Sources */,
 				66CC6B3A22BDD01800F86D10 /* API.swift in Sources */,
 				66D7B94E22C40C2C00BCB005 /* LeftViewController.swift in Sources */,

@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tM-0E-psG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2793" y="-1419"/>
+            <point key="canvasLocation" x="-2959" y="-1670"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="wa2-H6-x6X">
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPq-hF-UpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1886" y="-894"/>
+            <point key="canvasLocation" x="-1914" y="-905"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sXc-IF-Xrf">
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCS-bB-c89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-691" y="-946"/>
+            <point key="canvasLocation" x="-699" y="-870"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="esB-FF-ilY">
@@ -493,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGE-QI-j1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="358" y="-746"/>
+            <point key="canvasLocation" x="54" y="-946"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="iFG-Qo-1UM">
@@ -543,14 +543,23 @@
                                             <constraint firstAttribute="height" constant="120" id="Zjw-Ub-cQC"/>
                                         </constraints>
                                     </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHD-sZ-agU" userLabel="receive collection">
+                                        <rect key="frame" x="0.0" y="279" width="320" height="137"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hvi-fR-N5T" secondAttribute="trailing" constant="8" id="4Ow-XB-dOa"/>
+                                    <constraint firstAttribute="bottom" secondItem="uHD-sZ-agU" secondAttribute="bottom" id="9ZF-X6-c96"/>
+                                    <constraint firstItem="uHD-sZ-agU" firstAttribute="top" secondItem="0VX-Ex-HbN" secondAttribute="bottom" constant="5" id="9lt-nC-ube"/>
                                     <constraint firstItem="0VX-Ex-HbN" firstAttribute="leading" secondItem="n7q-Su-0RP" secondAttribute="leading" id="Lvc-zQ-38F"/>
+                                    <constraint firstItem="uHD-sZ-agU" firstAttribute="top" secondItem="0VX-Ex-HbN" secondAttribute="bottom" constant="5" id="Nb6-dw-jYc"/>
                                     <constraint firstItem="hvi-fR-N5T" firstAttribute="top" secondItem="n7q-Su-0RP" secondAttribute="top" constant="70" id="U5w-iW-dLH"/>
                                     <constraint firstItem="hvi-fR-N5T" firstAttribute="leading" secondItem="n7q-Su-0RP" secondAttribute="leading" constant="8" id="cA7-uP-J1F"/>
+                                    <constraint firstAttribute="trailing" secondItem="uHD-sZ-agU" secondAttribute="trailing" id="dc8-NU-MYb"/>
                                     <constraint firstAttribute="trailing" secondItem="0VX-Ex-HbN" secondAttribute="trailing" id="eLr-OS-alC"/>
+                                    <constraint firstItem="uHD-sZ-agU" firstAttribute="leading" secondItem="n7q-Su-0RP" secondAttribute="leading" id="gzB-FM-eQK"/>
                                     <constraint firstItem="0VX-Ex-HbN" firstAttribute="top" secondItem="hvi-fR-N5T" secondAttribute="bottom" constant="20" id="ifQ-rg-TMO"/>
                                 </constraints>
                             </view>
@@ -579,6 +588,7 @@
                     <connections>
                         <outlet property="logoutBtn" destination="H6m-lS-cgZ" id="1aY-r6-tSh"/>
                         <outlet property="menuBtn" destination="sFb-3c-xfX" id="qEl-9k-XtU"/>
+                        <outlet property="receiveCollectionView" destination="uHD-sZ-agU" id="pNh-ri-Mrx"/>
                         <outlet property="safeView" destination="n7q-Su-0RP" id="CiR-pN-zXh"/>
                         <outlet property="sendAmountBoxView" destination="0VX-Ex-HbN" id="vhu-Ep-1XC"/>
                         <outlet property="sendCurrencyIconView" destination="hvi-fR-N5T" id="rFE-Tm-Tw7"/>
@@ -587,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibd-kr-3gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1968.75" y="-1670"/>
+            <point key="canvasLocation" x="-2070" y="-1670"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="4wR-UG-d4e">
