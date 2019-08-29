@@ -10,7 +10,13 @@ class CurrencyRateModel: ReturnProtocol {
     
     var rateMap: [CurrencyRateModel] = []
     
-    init(base: String = "", pair: String = "", rate: Double = 0) {
+    init() {
+        self.base = ""
+        self.pair = ""
+        self.rate = 0
+    }
+    
+    init(base: String, pair: String, rate: Double) {
         self.base = base
         self.pair = pair
         self.rate = rate
