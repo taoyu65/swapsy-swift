@@ -16,11 +16,12 @@
 		668025D323145CE80023CD84 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D223145CE80023CD84 /* Storage.swift */; };
 		668025D623145FE10023CD84 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D523145FE10023CD84 /* StorageProtocol.swift */; };
 		668025D8231460330023CD84 /* StorageRealmBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D7231460330023CD84 /* StorageRealmBase.swift */; };
-		668025DA231460F20023CD84 /* GetLoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D9231460F20023CD84 /* GetLoginStatus.swift */; };
+		668025DA231460F20023CD84 /* ReadLoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025D9231460F20023CD84 /* ReadLoginStatus.swift */; };
 		668025DC231467840023CD84 /* WriteLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025DB231467840023CD84 /* WriteLoginInfo.swift */; };
 		668025DF23146CEC0023CD84 /* RunTimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025DE23146CEC0023CD84 /* RunTimeError.swift */; };
 		668025E1231478430023CD84 /* WriteCurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025E0231478430023CD84 /* WriteCurrencyRate.swift */; };
 		668025E4231482C50023CD84 /* CurrencyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668025E3231482C50023CD84 /* CurrencyMap.swift */; };
+		668099FF23185CD200980E76 /* ReadCurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668099FE23185CD200980E76 /* ReadCurrencyRate.swift */; };
 		668650A222D513E200B60326 /* ReceiveCurrencyListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */; };
 		668650A422D5147200B60326 /* SendAmountBoxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */; };
 		668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */; };
@@ -70,11 +71,12 @@
 		668025D223145CE80023CD84 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		668025D523145FE10023CD84 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		668025D7231460330023CD84 /* StorageRealmBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRealmBase.swift; sourceTree = "<group>"; };
-		668025D9231460F20023CD84 /* GetLoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginStatus.swift; sourceTree = "<group>"; };
+		668025D9231460F20023CD84 /* ReadLoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadLoginStatus.swift; sourceTree = "<group>"; };
 		668025DB231467840023CD84 /* WriteLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLoginInfo.swift; sourceTree = "<group>"; };
 		668025DE23146CEC0023CD84 /* RunTimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeError.swift; sourceTree = "<group>"; };
 		668025E0231478430023CD84 /* WriteCurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCurrencyRate.swift; sourceTree = "<group>"; };
 		668025E3231482C50023CD84 /* CurrencyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyMap.swift; sourceTree = "<group>"; };
+		668099FE23185CD200980E76 /* ReadCurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCurrencyRate.swift; sourceTree = "<group>"; };
 		668650A122D513E200B60326 /* ReceiveCurrencyListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCurrencyListBuilder.swift; sourceTree = "<group>"; };
 		668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAmountBoxBuilder.swift; sourceTree = "<group>"; };
 		668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCurrencyIconViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				668025D7231460330023CD84 /* StorageRealmBase.swift */,
-				668025D9231460F20023CD84 /* GetLoginStatus.swift */,
+				668099FE23185CD200980E76 /* ReadCurrencyRate.swift */,
+				668025D9231460F20023CD84 /* ReadLoginStatus.swift */,
 				668025DB231467840023CD84 /* WriteLoginInfo.swift */,
 				668025E0231478430023CD84 /* WriteCurrencyRate.swift */,
 			);
@@ -532,9 +535,10 @@
 				668025E1231478430023CD84 /* WriteCurrencyRate.swift in Sources */,
 				66CC6B3C22BDD0AE00F86D10 /* Login.swift in Sources */,
 				668650A222D513E200B60326 /* ReceiveCurrencyListBuilder.swift in Sources */,
+				668099FF23185CD200980E76 /* ReadCurrencyRate.swift in Sources */,
 				668F576F22D1571C00FF3486 /* SegmentioBuilder.swift in Sources */,
 				66D7B95322C4222300BCB005 /* RootViewController.swift in Sources */,
-				668025DA231460F20023CD84 /* GetLoginStatus.swift in Sources */,
+				668025DA231460F20023CD84 /* ReadLoginStatus.swift in Sources */,
 				668025D0231326530023CD84 /* CurrencyRateRealm.swift in Sources */,
 				668F578A22D3F55500FF3486 /* SystemExtension.swift in Sources */,
 				66CC6B4022BDE45B00F86D10 /* APIReturn.swift in Sources */,

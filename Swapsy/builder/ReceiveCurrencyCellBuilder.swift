@@ -58,7 +58,9 @@ class ReceiveCurrencyCellBuilder: UICollectionViewCell {
         view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 14, height: 14)).cgPath
     }
     
-    public func updateData() {
-        
+    public func updateData(rate: CurrencyRateModel) {
+        currencyName.text = rate.pair
+        currencyRate.text = "Current rate: \(String(rate.rate))"
+        flagImage.image = UIImage(named: rate.pair)
     }
 }

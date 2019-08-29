@@ -3,14 +3,16 @@ import UIKit
 //
 //extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        
+//        let rate = rateMap[indexPath.row]
+//        let cell  = receiveCollection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ReceiveCurrencyCellBuilder
+//        cell.updateData(rate: rate)
+//        return cell
 //    }
-//    
-//    
+//
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 0
+//        return 2
 //    }
-// 
+//
 //}
 
 //class ReceiveCurrencyListBuilder: UIViewController {

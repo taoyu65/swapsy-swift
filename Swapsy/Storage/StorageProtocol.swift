@@ -3,7 +3,7 @@ import Foundation
 
 protocol StorageProtocol {
     
-    func getLoginStatus() -> LoginStatus
+    func ReadLoginStatus() -> LoginStatus
     
     func writeLoginInfo(email: String, status: LoginStatus)
     
