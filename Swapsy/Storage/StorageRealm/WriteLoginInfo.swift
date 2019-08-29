@@ -1,5 +1,6 @@
 
 extension StorageRealmBase {
+    
     func writeLoginInfo(email: String, status: LoginStatus) {
         let userStatus = UserStatusRealm()
         userStatus.loginEmail = email

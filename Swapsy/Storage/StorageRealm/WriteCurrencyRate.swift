@@ -2,6 +2,7 @@
 import Foundation
 
 extension StorageRealmBase {
+    
     func writeCurrencyRate(rate: [CurrencyRateModel]) {
         try! realm.write {
             let allDeleteRates = realm.objects(CurrencyRateRealm.self)
