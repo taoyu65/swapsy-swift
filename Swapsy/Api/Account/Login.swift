@@ -15,7 +15,9 @@ extension API {
         let requestUrl = getUrl(route: API.loginRoute)
         Alamofire.request(requestUrl, method: .get, parameters: params).responseJSON {
             response in
-            let re = APIReturn(returnJson: JSON(response.result.value!))
+            let value = response.result.value
+            self.checkReturnValue(value: value as Any)
+            let re = APIReturn(returnJson: JSON(value!))
            
 //            let re_tem = APIReturn(true, "") //TAOYU:  this need to be replaced with the real invoke
             self.loginDelegate?.userDidLogin(apiReturn: re)

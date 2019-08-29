@@ -11,7 +11,9 @@ extension API {
         Alamofire.request(requestUrl, method: .get).responseJSON {
             response in
             let crm = CurrencyRateModel()
-            let re = APIReturn(returnJson: JSON(response.result.value!), pObj: crm)
+            let value = response.result.value
+            self.checkReturnValue(value: value as Any)
+            let re = APIReturn(returnJson: JSON(value!), pObj: crm)
             self.checkContentObj(obj: re.obj)
             success(re.obj as! CurrencyRateModel)
         }

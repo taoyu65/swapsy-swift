@@ -15,7 +15,9 @@ extension API {
         Alamofire.request(requestUrl, method: .get, parameters: nil).responseJSON {
             response in
             let plist = PlistModel()
-            let re = APIReturn(returnJson: JSON(response.result.value!), pObj: plist)
+            let value = response.result.value
+            self.checkReturnValue(value: value as Any)
+            let re = APIReturn(returnJson: JSON(value!), pObj: plist)
             self.checkContentObj(obj: re.obj)
             self.initDelegate?.updateInit(plist: re.obj as! PlistModel)
         }

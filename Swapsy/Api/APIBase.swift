@@ -18,4 +18,13 @@ class APIBase {
             fatalError(message)
         }
     }
+    
+    func checkReturnValue(value: Any) {
+        if case Optional<Any>.none = value {
+            RuntimeError("API Problem", true)
+            fatalError("API Problem.")
+        } else {
+            
+        }
+    }
 }
