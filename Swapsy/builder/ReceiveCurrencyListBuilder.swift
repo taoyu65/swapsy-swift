@@ -1,57 +1,53 @@
 
 import UIKit
-//
-//extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let rate = rateMap[indexPath.row]
-//        let cell  = receiveCollection.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ReceiveCurrencyCellBuilder
-//        cell.updateData(rate: rate)
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 2
-//    }
-//
-//}
 
-//class ReceiveCurrencyListBuilder: UIViewController {
-//    override func viewDidLoad() {
-//        _startBuild()
-//    }
-//
-//    private func _startBuild () {
-//        let cellId = "cellId"
-//        var currencyLabel = UILabel(frame: .zero)
-//
-//        var collection: UICollectionView = {
-//            let layout = UICollectionViewFlowLayout()
-//            let view = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-//            layout.scrollDirection = .vertical
-//            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//            layout.minimumInteritemSpacing = 10
-//            layout.minimumLineSpacing = 15
-//            view.translatesAutoresizingMaskIntoConstraints = false
-//            view.backgroundColor = UIColor(named: "")?.withAlphaComponent(1)
-//            view.isScrollEnabled = true
-//            view.register(ReceiveCurrencyCellBuilder.self, forCellWithReuseIdentifier: cellId)
-//            return view
-//        }()
-//    }
-//
-//    private func initLabel () -> UILabel {
-//        let label = UILabel(frame: .zero)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.textAlignment = .right
-//        label.font = .swapsyFontLight(ofSize: 10)
-//        label.textColor = .swapsyWhite
-//
-//        return label
-//    }
-//
-//    private func initImage(imageName: String) -> UIImage? {
-//        guard let image = UIImage(named: imageName) else {  return nil }
-//
-//        return image
-//    }
-//}
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return rateMap.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as! ReceiveCurrencyCellBuilder
+        cell.updateData(rate: rateMap[indexPath.row])
+        return cell
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: SwapsyStoryBoard.swapsyStoryBoard, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: SwapsyIdentifier.selectOfferIdentifier) as! SelectOfferController
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.bounds.width - 30, height: 45)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+}

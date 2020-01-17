@@ -26,7 +26,7 @@
 		668650A422D5147200B60326 /* SendAmountBoxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */; };
 		668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */; };
 		668F576F22D1571C00FF3486 /* SegmentioBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F576E22D1571C00FF3486 /* SegmentioBuilder.swift */; };
-		668F577222D15F5E00FF3486 /* SwapsyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F577122D15F5E00FF3486 /* SwapsyColor.swift */; };
+		668F577222D15F5E00FF3486 /* Swapsy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F577122D15F5E00FF3486 /* Swapsy.swift */; };
 		668F577522D181ED00FF3486 /* SwapsyFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F577422D181ED00FF3486 /* SwapsyFontExtension.swift */; };
 		668F577822D1875800FF3486 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F577722D1875800FF3486 /* Init.swift */; };
 		668F577A22D1897700FF3486 /* InitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F577922D1897700FF3486 /* InitModel.swift */; };
@@ -56,6 +56,9 @@
 		66DA659E2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA659D2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift */; };
 		66DA65A02311D7F400F709E3 /* MainImageViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA659F2311D7F400F709E3 /* MainImageViewBuilder.swift */; };
 		66DA65A22311E8BF00F709E3 /* CurrencyRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA65A12311E8BF00F709E3 /* CurrencyRateModel.swift */; };
+		66E619C62319C71400178C80 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E619C52319C71400178C80 /* ExchangeRate.swift */; };
+		66E619CB231AF0C900178C80 /* SelectOfferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E619CA231AF0C900178C80 /* SelectOfferController.swift */; };
+		66E619CE231B066300178C80 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E619CD231B066300178C80 /* SearchResultViewController.swift */; };
 		7A5B1EA8003C169EDAAD944C /* Pods_Swapsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +84,7 @@
 		668650A322D5147200B60326 /* SendAmountBoxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAmountBoxBuilder.swift; sourceTree = "<group>"; };
 		668650A522D53A4300B60326 /* SendCurrencyIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCurrencyIconViewController.swift; sourceTree = "<group>"; };
 		668F576E22D1571C00FF3486 /* SegmentioBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentioBuilder.swift; sourceTree = "<group>"; };
-		668F577122D15F5E00FF3486 /* SwapsyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapsyColor.swift; sourceTree = "<group>"; };
+		668F577122D15F5E00FF3486 /* Swapsy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swapsy.swift; sourceTree = "<group>"; };
 		668F577422D181ED00FF3486 /* SwapsyFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapsyFontExtension.swift; sourceTree = "<group>"; };
 		668F577722D1875800FF3486 /* Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		668F577922D1897700FF3486 /* InitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitModel.swift; sourceTree = "<group>"; };
@@ -111,6 +114,9 @@
 		66DA659D2311D70900F709E3 /* ReceiveCurrencyCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCurrencyCellBuilder.swift; sourceTree = "<group>"; };
 		66DA659F2311D7F400F709E3 /* MainImageViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageViewBuilder.swift; sourceTree = "<group>"; };
 		66DA65A12311E8BF00F709E3 /* CurrencyRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateModel.swift; sourceTree = "<group>"; };
+		66E619C52319C71400178C80 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		66E619CA231AF0C900178C80 /* SelectOfferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfferController.swift; sourceTree = "<group>"; };
+		66E619CD231B066300178C80 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		89160C9F0B08DE278CC706D3 /* Pods_Swapsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swapsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AF6AE568599FDE194B285F /* Pods-Swapsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.release.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.release.xcconfig"; sourceTree = "<group>"; };
 		E99BA5FDCD7456DCEAA9C413 /* Pods-Swapsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swapsy.debug.xcconfig"; path = "Target Support Files/Pods-Swapsy/Pods-Swapsy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		6649A41422BC6DF800A38624 /* Swapsy */ = {
 			isa = PBXGroup;
 			children = (
+				66E619C32319C6E600178C80 /* BLL */,
 				668025DD23146CD80023CD84 /* Exception */,
 				668F578222D29FA000FF3486 /* Component */,
 				668F577D22D191B100FF3486 /* Supporting Files */,
@@ -230,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				6649A41C22BC6DFA00A38624 /* Assets.xcassets */,
-				668F577122D15F5E00FF3486 /* SwapsyColor.swift */,
+				668F577122D15F5E00FF3486 /* Swapsy.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -348,6 +355,7 @@
 		66D7B94C22C40BF800BCB005 /* Swapsy */ = {
 			isa = PBXGroup;
 			children = (
+				66E619CC231B064600178C80 /* Search */,
 				66D7B94F22C40C3300BCB005 /* Menu */,
 			);
 			path = Swapsy;
@@ -369,6 +377,31 @@
 				66DA659B2311D4DD00F709E3 /* MainViewHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		66E619C32319C6E600178C80 /* BLL */ = {
+			isa = PBXGroup;
+			children = (
+				66E619C42319C6F900178C80 /* Setting */,
+			);
+			path = BLL;
+			sourceTree = "<group>";
+		};
+		66E619C42319C6F900178C80 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				66E619C52319C71400178C80 /* ExchangeRate.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		66E619CC231B064600178C80 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				66E619CA231AF0C900178C80 /* SelectOfferController.swift */,
+				66E619CD231B066300178C80 /* SearchResultViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		B2740CD4610D3A1B976235B0 /* Pods */ = {
@@ -522,6 +555,7 @@
 				6649A41822BC6DF800A38624 /* LoginViewController.swift in Sources */,
 				668025E4231482C50023CD84 /* CurrencyMap.swift in Sources */,
 				668025D323145CE80023CD84 /* Storage.swift in Sources */,
+				66E619C62319C71400178C80 /* ExchangeRate.swift in Sources */,
 				668F578122D1930E00FF3486 /* PlistModel.swift in Sources */,
 				66C292F222D904AE0035F1DA /* UserStatusModel.swift in Sources */,
 				66DA65A02311D7F400F709E3 /* MainImageViewBuilder.swift in Sources */,
@@ -529,9 +563,10 @@
 				668650A622D53A4300B60326 /* SendCurrencyIconViewController.swift in Sources */,
 				66DA65A22311E8BF00F709E3 /* CurrencyRateModel.swift in Sources */,
 				668025D8231460330023CD84 /* StorageRealmBase.swift in Sources */,
-				668F577222D15F5E00FF3486 /* SwapsyColor.swift in Sources */,
+				668F577222D15F5E00FF3486 /* Swapsy.swift in Sources */,
 				668F577822D1875800FF3486 /* Init.swift in Sources */,
 				668F578822D3EE3E00FF3486 /* SendCurrencyIconBuilder.swift in Sources */,
+				66E619CB231AF0C900178C80 /* SelectOfferController.swift in Sources */,
 				668025E1231478430023CD84 /* WriteCurrencyRate.swift in Sources */,
 				66CC6B3C22BDD0AE00F86D10 /* Login.swift in Sources */,
 				668650A222D513E200B60326 /* ReceiveCurrencyListBuilder.swift in Sources */,
@@ -553,6 +588,7 @@
 				668025DC231467840023CD84 /* WriteLoginInfo.swift in Sources */,
 				66C292E922D7E05F0035F1DA /* TradeStatus.swift in Sources */,
 				66CC6B3A22BDD01800F86D10 /* API.swift in Sources */,
+				66E619CE231B066300178C80 /* SearchResultViewController.swift in Sources */,
 				66D7B94E22C40C2C00BCB005 /* LeftViewController.swift in Sources */,
 				66C292E622D7DE340035F1DA /* BlockModel.swift in Sources */,
 				6640935722D7AD0500CAF20C /* MainLabelBuilder.swift in Sources */,

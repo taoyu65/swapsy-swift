@@ -11,3 +11,13 @@ struct SwapsyColor {
 //    static let swapsyBlue = FlatBlue()
 //    static let darkGray = FlatGrayDark()
 }
+
+struct SwapsyStoryBoard {
+    static let mainStoryBoard = "Main"
+    static let swapsyStoryBoard = "Swapsy"
+}
+
+struct SwapsyIdentifier {
+    static let searchResultIdentifier = "searchResultIdentifier"
+    static let selectOfferIdentifier = "selectOfferIdentifier"
+}

@@ -3,10 +3,6 @@ import SideMenu
 import Segmentio
 
 class MainViewController: UIViewController {
-    
-    let plist = PlistModel()
-    var rateMap = [CurrencyRateModel]()
-    
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     @IBOutlet weak var safeView: UIView!
@@ -15,12 +11,45 @@ class MainViewController: UIViewController {
     @IBOutlet weak var sendAmountBoxView: UIView!
     @IBOutlet weak var receiveCollectionView: UIView!
     
+    weak var receiveCollection: UICollectionView!
+    
+    let plist = PlistModel()
+    var rateMap = [CurrencyRateModel]()
+    let cellId = "cellId"
     private var circleViewController: SendCurrencyIconViewControlelr?
+    internal var sendCurrency: String = "USD"
 
+    override func loadView() {
+        super.loadView()
+        
+        //MARK: receive currency list
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.receiveCollectionView.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            self.receiveCollectionView.topAnchor.constraint(equalTo: collectionView.topAnchor),
+            self.receiveCollectionView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            self.receiveCollectionView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor),
+            self.receiveCollectionView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            ])
+        self.receiveCollection = collectionView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("this is rate map:", rateMap)
+        self.receiveCollection.dataSource = self
+        self.receiveCollection.delegate = self
+        self.receiveCollection.register(ReceiveCurrencyCellBuilder.self, forCellWithReuseIdentifier: Cell.identifier)
+        self.receiveCollection.alwaysBounceVertical = true
+        self.receiveCollection.backgroundColor = .white
+        
+        
+        //MARK: side bar
         _initSideMenu()
+        
+        //MARK: load rate
+        loadRates(sendCurrency: sendCurrency)
+        print("rate map is: ", rateMap[1].rate)
         
         //MARK: others
         menuBtn.tintColor = .swapsyFlatBlue
@@ -76,30 +105,13 @@ class MainViewController: UIViewController {
             return bt
         }()
         
-        //MARK: receive currency list
-        let receiveCollection: UICollectionView = {
-            let cellId = "cellId"
-//            var currencyLabel = UILabel(frame: .zero)
-            let layout = UICollectionViewFlowLayout()
-            let view = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-            layout.scrollDirection = .vertical
-            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            layout.minimumInteritemSpacing = 10
-            layout.minimumLineSpacing = 15
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.backgroundColor = UIColor(named: "")?.withAlphaComponent(1)
-            view.isScrollEnabled = true
-            view.register(ReceiveCurrencyCellBuilder.self, forCellWithReuseIdentifier: cellId)
-            return view
-        }()
-        
         safeView.addSubview(segmentioView)
         sendAmountBoxView.addSubview(sendAmountBox)
         sendAmountBox.addSubview(lastUpdateLabel)
         sendAmountBox.addSubview(currentCurrencyLabel)
         sendAmountBox.addSubview(sendAmountField)
         sendAmountBox.addSubview(updateButton)
-        receiveCollectionView.addSubview(receiveCollection)
+//        receiveCollectionView.addSubview(receiveCollection)
         
         NSLayoutConstraint.activate([
             sendAmountBox.topAnchor.constraint(equalTo: sendAmountBoxView.topAnchor, constant: 5),
@@ -130,28 +142,30 @@ class MainViewController: UIViewController {
             
         ])
         
-        print("view did load")
-        
         segmentioView.valueDidChange = {
             segmentio, segmentIndex in
             print("selected item: ", segmentIndex)
             
-            var imageName = segmentio.segmentioItems[segmentIndex].title ?? ""
-            imageName = imageName + "-s"
-            print(imageName)
+            guard let sendCurrency = segmentio.segmentioItems[segmentIndex].title else {
+                fatalError("send currency is missing.")
+            }
+            
+            let imageName = sendCurrency + "-s"
+            self.sendCurrency = sendCurrency
+            self.loadRates(sendCurrency: sendCurrency)
+            self.receiveCollection.reloadData()
             
             self.circleViewController?.changeCurrencyImage(name: imageName)
         }
         
-//        receiveCollection.delegate = self
-//        receiveCollection.dataSource = self
-    
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        //
         
-        print("view did appear")
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//        print("view did appear")
+//    }
     
     private func _initSideMenu() {
         SideMenuManager.default.menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? UISideMenuNavigationController
@@ -180,4 +194,5 @@ extension UIStackView {
         insertSubview(subView, at: 0)
     }
 }
+
 
